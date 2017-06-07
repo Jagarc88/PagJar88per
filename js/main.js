@@ -13,9 +13,12 @@ $(document).ready(function(){
 
 	function follower(){   
 	   $(document).on('mousemove', function(e){
-		    $('#seguidor').css({
-		       left:  e.pageX, top:   e.pageY
-		    });
+		    $('#seguidor').animate({
+				    left: e.pageX,
+				    top: e.pageY
+				  }, {
+				    duration: 0.005
+				  });
 		    $('#seguidor').text(" LEFT: "+ e.pageX+" TOP: "+e.pageY);
 		});
 	}
