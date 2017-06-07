@@ -51,6 +51,8 @@ $result .= '<div id="cuerpo_index">';
 // </div> CUERPO_INDEX
 $result .= '</div>';
 
+$result .='<div id="seguidor"></div>';
+
 $result .='</html>';
 echo $result;
 

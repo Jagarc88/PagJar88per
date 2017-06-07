@@ -7,6 +7,15 @@
 	background-color: red;
 }
 
+#seguidor{
+
+	position: absolute;
+
+	width: 150px;
+	height: 150px;
+	background-color: yellow;
+}
+
 h1{
 
 	margin: 0 auto;

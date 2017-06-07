@@ -11,9 +11,18 @@ $(document).ready(function(){
 		});
 	}
 
+	function follower(){   
+	   $(document).on('mousemove', function(e){
+		    $('#seguidor').css({
+		       left:  e.pageX, top:   e.pageY
+		    });
+		    $('#seguidor').text(" LEFT: "+ e.pageX+" TOP: "+e.pageY);
+		});
+	}
 
 //DECLARACIONES
 
 init();
+follower();
 
 });
