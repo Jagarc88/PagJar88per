@@ -1,5 +1,11 @@
 <?php
 $result_cuerpo_index = "";
+
+$pre = array("id","texto");
+$cond = array("=","=");
+$post = array("3","BUENO");
+
+//$resultado = select_condition($pre ,$cond, $post);
 $resultado = select();
 
 if ($resultado->num_rows > 0) {
