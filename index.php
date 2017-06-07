@@ -1,24 +1,55 @@
 <?php 
 
 $result = '<html>
+
 <head>
 <script src="jquery-3.2.1.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
 <script src="./js/main.js"></script>
+<link rel="stylesheet" type="text/css" href="./css/main.css">
 </head>';
 
-$mysqli = new mysqli("mysql.hostinger.es", "u301782764_jagar", "contrasena", "u301782764_aux");
+include './php/funciones.php';
+include './php/DAO.php';
 
-$consulta  = "SELECT * FROM textos";
-$resultado = $mysqli->query($consulta);
+//ENCABEZADO
+$result .= '<div id="encabezado">';
 
-    while($row = $resultado->fetch_assoc()) {
-        $result .= "<h2 class='titulo'>id: " . $row["id"]. "</h2> <b>- Texto:</b> " . $row["texto"]. "<br>";
-    }
-$resultado->close();
+$result .= include './php/encabezado.php';
 
-$result .='';
+$result .= '</div>';
+
+// CUERPO_INDEX
+$result .= '<div id="cuerpo_index">';
+
+
+	/*
+	// IZQUIERDA
+	$result .= '
+	<div id="izquierda_index">'
+
+	include './php/izquierda.php'
+
+		//IZQUIERDA - TOP
+		include './php/izquierda_top.php'
+
+		//IZQUIERDA - RESTO
+		include './php/izquierda_resto.php'
+
+	$result .= '
+	</div>';
+	*/
+
+	// CUERPO
+	$result .= '<div id="cuerpo">';
+
+	$result .= include './php/cuerpo_index.php';
+
+	$result .= '</div>';
+
+// </div> CUERPO_INDEX
+$result .= '</div>';
 
 $result .='</html>';
 echo $result;

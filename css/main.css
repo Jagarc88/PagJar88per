@@ -1,0 +1,25 @@
+
+#cuerpo_index{
+
+	margin: 0 auto;
+	width: 75%;
+
+	background-color: red;
+}
+
+h1{
+
+	margin: 0 auto;
+}
+
+#encabezado{
+
+	width: 100%;
+
+	background-color: blue;
+}
+
+#cuerpo{
+
+	width: 100%;
+}
