@@ -1,11 +1,11 @@
-<?php 
+<?php
 
 $columnas = ["id","texto"];
 $nombreTablas = ["textos"];
 
 function select() {
 
-	$mysqli = new mysqli("mysql.hostinger.es", "u301782764_jagar", "contrasena", "u301782764_aux");
+$mysqli = new mysqli("localhost", "pruebauser", "contrasena", "prueba");
 
 	$consulta  = "SELECT * FROM textos";
 	$resultado = $mysqli->query($consulta);
@@ -15,7 +15,7 @@ function select() {
 
 function select_condition($pre ,$condiciones, $post) {
 
-	$mysqli = new mysqli("mysql.hostinger.es", "u301782764_jagar", "contrasena", "u301782764_aux");
+	$mysqli = new mysqli("localhost", "pruebauser", "contrasena", "prueba");
 
 	$consulta  = "SELECT * FROM textos";
 
